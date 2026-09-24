@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router";import { EmployeeTask } from "@/components/employee-task";
+export const Route=createFileRoute("/t/$token")({head:()=>({meta:[{title:"Field task — Steer"},{name:"description",content:"Secure single-task field execution page."},{property:"og:title",content:"Field task — Steer"},{property:"og:description",content:"Secure single-task field execution page."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:EmployeeTask});

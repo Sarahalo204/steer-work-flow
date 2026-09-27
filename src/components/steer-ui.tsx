@@ -29,11 +29,11 @@ export const tasks = [
 ];
 
 export function PageHeading({ eyebrow, title, description, action }: { eyebrow?: string; title: string; description?: string; action?: ReactNode }) {
-  return <header className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><div>{eyebrow && <p className="mb-2 text-xs font-bold uppercase tracking-wide text-primary/60">{eyebrow}</p>}<h1 className="font-display text-3xl font-semibold text-foreground sm:text-4xl">{title}</h1>{description && <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">{description}</p>}</div>{action}</header>;
+  return <header className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"><div>{eyebrow && <p className="mb-2 text-[13px] font-bold uppercase tracking-wide text-primary">{eyebrow}</p>}<h1 className="font-display text-[30px] font-semibold leading-tight text-foreground sm:text-[32px]">{title}</h1>{description && <p className="mt-2 max-w-2xl text-[15px] leading-6 text-muted-foreground">{description}</p>}</div>{action}</header>;
 }
 
 export function StatusPill({ tone = "neutral", children }: { tone?: "neutral" | "blue" | "green" | "amber" | "red"; children: ReactNode }) {
-  return <span className={cn("inline-flex min-h-6 items-center rounded-full border px-2.5 text-[11px] font-semibold", tone === "green" && "border-success/20 bg-success-soft text-success", tone === "amber" && "border-warning/20 bg-warning-soft text-warning-foreground", tone === "blue" && "border-info/20 bg-info-soft text-info", tone === "red" && "border-destructive/20 bg-destructive/5 text-destructive", tone === "neutral" && "border-border bg-muted text-muted-foreground")}>{children}</span>;
+  return <span className={cn("inline-flex min-h-6 items-center rounded-full border px-2.5 text-xs font-semibold", tone === "green" && "border-success/20 bg-success-soft text-success", tone === "amber" && "border-warning/20 bg-warning-soft text-warning-foreground", tone === "blue" && "border-info/20 bg-info-soft text-info", tone === "red" && "border-destructive/20 bg-destructive/5 text-destructive", tone === "neutral" && "border-border bg-muted text-muted-foreground")}>{children}</span>;
 }
 
 export function Avatar({ initials }: { initials: string }) {
